@@ -9,10 +9,10 @@ services:
         extends:
             file: ./artemis-prod-mysql.yml
             service: artemis-app
-    mysql:
-        extends:
-            file: ./artemis-prod-mysql.yml
-            service: mysql
+#    mysql:
+#        extends:
+#            file: ./artemis-prod-mysql.yml
+#            service: mysql
     nginx:
         extends:
             file: ./artemis-prod-mysql.yml
@@ -22,3 +22,5 @@ networks:
     artemis:
         driver: "bridge"
         name: artemis
+    athena-network:
+        external: true

@@ -40,8 +40,11 @@ services:
             start_period: 60s
         networks:
             - artemis
+            - athena-network
 
 networks:
     artemis:
         driver: "bridge"
         name: artemis
+    athena-network:
+      external: true
